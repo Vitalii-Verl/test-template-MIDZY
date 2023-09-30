@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
 
 body{
-  background: #303030;
+  background: #383636;
   font-family: 'Rubik', sans-serif;
   color: white;
 }
@@ -13,6 +13,10 @@ body{
   color: #de1391;
   padding-left: 12px;
   font-size: 18px;
+  white-space: nowrap;
+}
+.fs-50{
+  font-size: 72px;
 }
 .container{
   margin: 0 auto;
@@ -26,6 +30,9 @@ body{
   align-items: center;
   background: #303030;
   height: 93px;
+}
+.header__logo{
+  height: 54px;
 }
 .header__links a{
   margin-left: 15px;
@@ -54,10 +61,6 @@ body{
   justify-content: center;
   align-items: center;
   overflow: hidden;
-
-  /* box-shadow: #de1391; */
-  /* box-shadow: 0px 73px 78px 45px rgba(222,19,145,0.67); */
-  /* box-shadow: 0px 109px 131px 39px rgba(222,19,145,0.61); */
 }
 .listen video{
   position: absolute;
@@ -103,10 +106,26 @@ body{
 .latest-releases .flex{
   padding-top: 30px;
 }
+@media (max-width: 1182px){
+  .latest-releases .flex{
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .releases{
+    min-width: 380px;
+  }
+  
+}
+@media (max-width: 800px){
+  .releases{
+    min-width: auto;
+  }
+}
 .releases{
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin: 10px 5px;
 }
 .releases__img{
   height: 262px;
@@ -153,12 +172,252 @@ body{
   color: #de1391;
 }
 .video{
-  padding-top: 95px;
+  padding-top: 90px;
 }
 .video h2{
   display: inline-block;
-  padding-top: 160px ;
   padding-left: 30px;
   font-size: 36px;
   text-transform: uppercase;
+}
+.video__bg{
+  margin-top: 22px;
+  height: 536px;
+  background: url('../img/video-bg.png') center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 10px 7px rgba(0,0,0,0.60);
+}
+.video__video{
+  max-width: 700px;
+  padding: 10px;
+}
+.video video{
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+.info{
+  padding-top: 90px;
+}
+.info h2{
+  padding-left: 30px;
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+.info__bg{
+  margin-top: 20px;
+  background: url('../img/info-bg.png') center;
+  height: 500px;
+  /* width: 100%; */
+  box-shadow: 0px 0px 10px 7px rgba(0,0,0,0.60);
+}
+.info .flex{
+  /* width: 100%; */
+  align-items: center;
+  justify-content: space-evenly;
+}
+.info__text{
+  max-width: 455px;
+}
+.info__text-top{
+  display: flex;
+}
+.info__all-in-us{
+  padding: 15px 10px;
+}
+.info__all-in-us h3{
+  padding-bottom: 20px;
+  font-weight: normal;
+}
+.info__all-in-us p{
+  text-align: right;
+}
+/* .info__text-top > span{
+  display: block;
+  max-height: 80px;
+} */
+.info__text-bottom{
+  margin-top: 17px;
+  padding: 20px;
+  font-size: 18px;
+}
+.info__img{
+  text-align: right;
+  font-size: 12px;
+}
+.info__img img{
+  display: block;
+  max-height: 355px;
+  max-width: 530px;
+  margin-bottom: 12px;
+}
+.text-opacity-bg{
+  background: #00000079;
+  border-radius: 8px;
+}
+@media (max-width: 1000px) {
+  .info__text{
+    font-size: 14px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+ .info__img img{
+  height: 284px;
+  width: 424px;
+  margin-right: 10px;
+  margin-left: 10px;
+ } 
+ .info__img span{
+  margin-right: 10px;
+ }
+}
+@media (max-width: 720px) {
+  .info .flex{
+    flex-direction: column-reverse;
+  }
+  .info__text{
+    font-size: 12px;
+  }
+  .info__text-top{
+    font-size: 12px;
+  }
+  .info__text-bottom{
+    margin-top: 7px;
+    padding: 10px;
+    font-size: 12px;
+  }
+  .info__img{
+    font-size: 10px;
+  }
+  .info__img img{
+    height: 213px;
+    width: 318px;
+  }
+}
+
+.girls{
+  padding-top: 85px;
+  padding-bottom: 105px;
+}
+.girls__flex-top{
+  display: flex;
+  justify-content: space-between;
+}
+.girls__flex-bottom{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.girls__flex-bottom .girls__img{
+  margin: 0 17px;
+}
+.girls__img{
+  height: 538px;
+  width: 358px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 46px;
+  text-transform: uppercase;
+  font-weight: bold;
+  box-shadow: 0px 0px 10px 7px rgba(0,0,0,0.60);
+}
+.girls__img span{
+  display: none;
+}
+.girls__img:hover span{
+  display: block;
+}
+@media (max-width: 1110px){
+  .girls__flex-top{
+    justify-content: space-evenly;
+  }
+  .girls__img{
+    height: 430px;
+    width: 286px;
+    font-size: 32px;
+  }
+}
+@media (max-width: 920px){
+  .girls__flex-bottom .girls__img{
+    margin: 0 10px;
+  }
+  .girls__img{
+    height: 322px;
+    width: 214px;
+    font-size: 24px;
+  }
+}
+@media (max-width: 700px) {
+  .girls__flex-top{
+    flex-direction: column;
+    align-items: center;
+  }
+  .girls__flex-bottom{
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+  }
+  .girls__img{
+    height: 538px;
+    width: 358px;
+    font-size: 46px;
+    margin: 10px 5px;
+  }
+  .girls__flex-bottom .girls__img{
+    margin: 10px 5px;
+  }
+}
+#Yeji{
+  background: url('../img/girl-1.png') center no-repeat;
+  background-size: cover;
+}
+#Yeji:hover{
+  background: url('../img/girl-1-filtered.png') center no-repeat;
+  background-size: cover;
+}
+#Lia{
+  background: url('../img/girl-2.png') center no-repeat;
+  background-size: cover;
+}
+#Lia:hover{
+  background: url('../img/girl-2-filtered.png') center no-repeat;
+  background-size: cover;
+}
+#Ryujin{
+  background: url('../img/girl-3.png') center no-repeat;
+  background-size: cover;
+}
+#Ryujin:hover{
+  background: url('../img/girl-3-filtered.png') center no-repeat;
+  background-size: cover;
+}
+#Chaeryeong{
+  background: url('../img/girl-4.png') center no-repeat;
+  background-size: cover;
+}
+#Chaeryeong:hover{
+  background: url('../img/girl-4-filtered.png') center no-repeat;
+  background-size: cover;
+}
+#Yuna{
+  background: url('../img/girl-5.png') center no-repeat;
+  background-size: cover;
+}
+#Yuna:hover{
+  background: url('../img/girl-5-filtered.png') center no-repeat;
+  background-size: cover;
+}
+
+footer{
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #303030;
 }
