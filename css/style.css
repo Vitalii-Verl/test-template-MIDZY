@@ -158,7 +158,7 @@ body{
   font-size: 14px;
 }
 .releases__title{
-  padding-top: 12px;
+  padding-top: 5px;
   font-size: 20px;
 }
 .releases__title a{
@@ -329,6 +329,7 @@ body{
 }
 .girls__img span{
   display: none;
+  margin: -2px 0;
 }
 .girls__img:hover span{
   display: block;
