@@ -245,6 +245,9 @@ body{
   padding: 20px;
   font-size: 18px;
 }
+.info__text-bottom a{
+  color: #fff;
+}
 .info__img{
   text-align: right;
   font-size: 12px;
